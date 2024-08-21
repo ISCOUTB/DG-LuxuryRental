@@ -1,4 +1,4 @@
-#"LuxuryRental Cartagena"**
+#**LuxuryRental Cartagena**
 
 ## **Requerimientos Funcionales**
 
