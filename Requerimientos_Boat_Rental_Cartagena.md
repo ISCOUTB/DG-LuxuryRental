@@ -1,5 +1,5 @@
 
-# **Requerimientos Funcionales y No Funcionales - Boat Rental Cartagena**
+#LuxuryRental Cartagena**
 
 ## **Requerimientos Funcionales**
 
