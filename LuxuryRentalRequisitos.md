@@ -1,4 +1,3 @@
-
 #LuxuryRental Cartagena**
 
 ## **Requerimientos Funcionales**
