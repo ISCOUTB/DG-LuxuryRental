@@ -1,4 +1,4 @@
-# 📅 Luxury Rental Boats
+# 📅 Luxury Rental Cartagena
 
 ## 📄 Descripción General
 Este sistema está diseñado para facilitar la gestión eficiente de alquileres de botes, proporcionando una solución completa tanto para usuarios como para administradores y dueños de botes. Incluye funcionalidades como el registro de usuarios, reservas, gestión de pagos y un dashboard avanzado para la monitorización de métricas del negocio.
