@@ -1,7 +1,7 @@
-# 📅 Sistema de Gestión de Alquiler de Botes
+# 📅 Luxury Rental Boats
 
 ## 📄 Descripción General
-Este sistema está diseñado para facilitar la gestión eficiente de alquileres de botes, proporcionando una solución completa tanto para usuarios como para administradores y dueños de botes. Incluye funcionalidades como registro de usuarios, reservas, gestión de pagos y un dashboard avanzado para la monitorización de métricas del negocio.
+Este sistema está diseñado para facilitar la gestión eficiente de alquileres de botes, proporcionando una solución completa tanto para usuarios como para administradores y dueños de botes. Incluye funcionalidades como el registro de usuarios, reservas, gestión de pagos y un dashboard avanzado para la monitorización de métricas del negocio.
 
 ## 🎯 Requerimientos Funcionales
 
@@ -25,7 +25,7 @@ Este sistema está diseñado para facilitar la gestión eficiente de alquileres 
 - **Notificaciones Push:** Alertas para confirmar reservas, pagos y disponibilidad de botes.
 
 ### 3. Métricas y Dashboard para el Dueño
-- **Visualización de Ingresos:** Mostrar ingresos totales y por bote.
+- **Visualización de Ingresos:** Mostrar ingresos totales y desglosados por bote.
 - **Monitorización de Costos:** Seguimiento de costos operativos y cálculo del beneficio neto.
 - **Análisis de Ocupación:** Análisis de la tasa de ocupación de botes y la duración media de los alquileres.
 - **Gráficos de Demanda:** Visualización de la demanda por temporada para planificación estratégica.
@@ -33,8 +33,8 @@ Este sistema está diseñado para facilitar la gestión eficiente de alquileres 
 - **Alertas de Mantenimiento:** Notificaciones automáticas para mantenimiento pendiente.
 
 ### 4. Gestión de Pagos
-- **Integración con Plataformas de Pago:** Compatibilidad con PSE, PayPal y otras plataformas.
-- **Historial de Pagos:** Registro de todos los pagos realizados por cliente y reserva.
+- **Integración con Plataformas de Pago:** Compatibilidad con ApplePay, GooglePay, PSE, PayPal y otras plataformas.
+- **Historial de Pagos:** Registro detallado de todos los pagos realizados por cliente y reserva.
 - **Múltiples Métodos de Pago:** Aceptación de pagos en efectivo, tarjeta o plataformas en línea.
 - **Recordatorios de Pagos:** Recordatorios automáticos para pagos pendientes.
 
@@ -42,6 +42,14 @@ Este sistema está diseñado para facilitar la gestión eficiente de alquileres 
 - **Alertas de Baja Disponibilidad:** Notificaciones cuando la disponibilidad de botes es baja.
 - **Recordatorios de Reservas y Pagos:** Recordatorios para próximas reservas y pagos pendientes.
 - **Alertas de Mantenimiento Preventivo:** Notificaciones basadas en el uso para el mantenimiento preventivo de los botes.
+
+### 6. Gestión de Catálogo de Botes
+- **Agregar y Eliminar Botes:** Gestión de botes disponibles en el catálogo.
+- **Calendario de Disponibilidad:** Cada bote tiene un calendario de disponibilidad registrado al momento de ser agregado.
+
+### 7. Gestión de Mantenimiento y Estado de Bandera
+- **Mantenimiento de Botes:** Definición y gestión de mantenimiento de botes, con cancelación automática de reservas afectadas.
+- **Estado de Bandera:** Marcado del estado de la bandera (verde o roja) basado en las condiciones climáticas, con notificaciones a los usuarios sobre la posibilidad de salida.
 
 ## 🛡️ Requerimientos No Funcionales
 
@@ -63,3 +71,17 @@ Este sistema está diseñado para facilitar la gestión eficiente de alquileres 
 
 ### 5. Disponibilidad
 - **Alta Disponibilidad:** El sistema garantiza un tiempo de actividad elevado, minimizando el tiempo de inactividad, especialmente durante las temporadas altas de reservas.
+
+---
+
+## 📦 Instalación y Uso
+
+### Requisitos Previos
+- **Flutter:** Asegúrate de tener Flutter instalado en tu máquina.
+- **Node.js y NPM:** Necesarios para la parte del servidor.
+- **Base de Datos:** Configura la base de datos según las instrucciones en `database_setup.md`.
+
+### Instalación
+1. **Clonar el Repositorio:**
+   ```bash
+   git clone https://github.com/usuario/repo.git
