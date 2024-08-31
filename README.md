@@ -84,4 +84,4 @@ Este sistema está diseñado para facilitar la gestión eficiente de alquileres 
 ### Instalación
 1. **Clonar el Repositorio:**
    ```bash
-   git clone https://github.com/usuario/repo.git
+   git clone https://github.com/ISCOUTB/DG-LuxuryRental.git
