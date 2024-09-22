@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
+import 'package:login_user/pages/dashboard_view.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -129,7 +130,13 @@ class LoginPage extends StatelessWidget {
               // Sign in Bottom
               ElevatedButton(
                 onPressed: () {
-                  // Acción cuando el botón es presionado (Por ejemplo, iniciar sesión)
+                  // Simular autenticación y navegar al Dashboard
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DashboardView(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,

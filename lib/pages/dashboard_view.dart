@@ -10,7 +10,7 @@ class DashboardView extends StatelessWidget {
       backgroundColor: const Color(0xFF1E1E2C),
       appBar: AppBar(
         backgroundColor: const Color(0xFF1E1E2C),
-        title: const Text('Luxery Rental ⚓'),
+        title: const Text('Luxury Rental ⚓'),
         titleTextStyle: const TextStyle(
           color: Colors.white,
           fontSize: 37,
