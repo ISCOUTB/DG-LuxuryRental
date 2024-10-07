@@ -1,0 +1,7 @@
+organization=isco-utb
+projectKey=ISCOUTB_DG-LuxuryRental
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.56801
+dashboardUrl=https://sonarcloud.io/dashboard?id=ISCOUTB_DG-LuxuryRental
+ceTaskId=AZJAvH8cZb_EclahOAvD
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZJAvH8cZb_EclahOAvD
