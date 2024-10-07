@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:login_user/pages/YachtListPage.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -25,7 +26,7 @@ class DashboardView extends StatelessWidget {
           ),
         ],
       ),
-      drawer: _buildDrawer(),
+      drawer: _buildDrawer(context),
       body: Row(
         children: [
           NavigationSection(),
@@ -36,7 +37,7 @@ class DashboardView extends StatelessWidget {
     );
   }
 
-  Widget _buildDrawer() {
+  Widget _buildDrawer(BuildContext context) {
     return Drawer(
       backgroundColor: const Color(0xFF1E1E2C),
       child: ListView(
@@ -51,22 +52,32 @@ class DashboardView extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
-          _buildDrawerItem(Icons.person, 'Profile'),
-          _buildDrawerItem(Icons.campaign, 'Gestión de Reservas'),
-          _buildDrawerItem(Icons.directions_boat, 'Gestión de Botes'),
-          _buildDrawerItem(Icons.find_in_page, 'Análisis y Reportes'),
-          _buildDrawerItem(Icons.settings, 'Settings'),
-          _buildDrawerItem(Icons.logout, 'Sign out'),
+          _buildDrawerItem(context, Icons.person, 'Profile'),
+          _buildDrawerItem(context, Icons.campaign, 'Gestión de Reservas'),
+          _buildDrawerItem(context, Icons.directions_boat, 'Gestión de Botes'),
+          _buildDrawerItem(context, Icons.find_in_page, 'Análisis y Reportes'),
+          _buildDrawerItem(context, Icons.settings, 'Settings'),
+          _buildDrawerItem(context, Icons.logout, 'Sign out'),
         ],
       ),
     );
   }
 
-  Widget _buildDrawerItem(IconData icon, String title) {
+  Widget _buildDrawerItem(BuildContext context, IconData icon, String title) {
     return ListTile(
       leading: Icon(icon, color: Colors.white),
       title: Text(title, style: const TextStyle(color: Colors.white)),
-      onTap: () {},
+      onTap: () {
+        if (title == 'Sign out') {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const YachtListPage(),
+            ),
+          );
+        }
+        // Lógica para otros elementos del menú
+      },
     );
   }
 
@@ -78,65 +89,88 @@ class DashboardView extends StatelessWidget {
       child: Column(
         children: [
           const ListTile(
-              title: Text('Agregar Funcionalidad',
-                  style: TextStyle(color: Colors.white))),
+            title: Text('Agregar Funcionalidad',
+                style: TextStyle(color: Colors.white)),
+          ),
           const ListTile(
-              title: Text('Agregar Funcionalidad',
-                  style: TextStyle(color: Colors.white))),
+            title: Text('Agregar Funcionalidad',
+                style: TextStyle(color: Colors.white)),
+          ),
           const ListTile(
-              title: Text('Agregar Funcionalidad',
-                  style: TextStyle(color: Colors.white))),
+            title: Text('Agregar Funcionalidad',
+                style: TextStyle(color: Colors.white)),
+          ),
           const ListTile(
-              title: Text('Agregar Funcionalidad',
-                  style: TextStyle(color: Colors.white))),
+            title: Text('Agregar Funcionalidad',
+                style: TextStyle(color: Colors.white)),
+          ),
           ListTile(
-              leading: Icon(Icons.sell_outlined, color: Colors.indigo[400]),
-              title: const Text('RENT', style: TextStyle(color: Colors.white))),
+            leading: Icon(Icons.sell_outlined, color: Colors.indigo[400]),
+            title: const Text('RENT', style: TextStyle(color: Colors.white)),
+          ),
           const ListTile(
-              title: Text('Agregar Funcionalidad',
-                  style: TextStyle(color: Colors.white))),
+            title: Text('Agregar Funcionalidad',
+                style: TextStyle(color: Colors.white)),
+          ),
         ],
       ),
     );
   }
 
-  // ignore: non_constant_identifier_names
+  // ignore: non_constant_identifier_nameWidget StatsSection() {, non_constant_identifier_names
   Widget StatsSection() {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Scrollbar(
           thumbVisibility: true,
-          // Para siempre mostrar el scrollbar
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const Text(
+                  'Estadísticas',
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+                const SizedBox(height: 10),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment
+                      .spaceBetween, // Distribuye el espacio entre las cartas
                   children: [
-                    _buildStatCard(
-                      'Botes Disponibles',
-                      '305',
-                      Icons.directions_boat_rounded,
-                      const Color.fromARGB(255, 0, 255, 64),
+                    Expanded(
+                      child: _buildStatCard(
+                        'Botes Disponibles',
+                        '305',
+                        Icons.directions_boat_rounded,
+                        const Color.fromARGB(255, 0, 255, 64),
+                      ),
                     ),
-                    _buildStatCard(
-                      'Botes sin Asignar',
-                      '10',
-                      Icons.directions_boat,
-                      const Color.fromARGB(255, 252, 194, 5),
+                    const SizedBox(width: 16), // Espacio entre las cartas
+                    Expanded(
+                      child: _buildStatCard(
+                        'Botes sin Asignar',
+                        '10',
+                        Icons.directions_boat,
+                        const Color.fromARGB(255, 252, 194, 5),
+                      ),
                     ),
-                    _buildStatCard(
-                      'Botes Pendientes',
-                      '7',
-                      Icons.directions_boat,
-                      const Color.fromARGB(255, 3, 223, 252),
+                    const SizedBox(width: 16), // Espacio entre las cartas
+                    Expanded(
+                      child: _buildStatCard(
+                        'Botes Pendientes',
+                        '7',
+                        Icons.directions_boat,
+                        const Color.fromARGB(255, 3, 223, 252),
+                      ),
                     ),
-                    _buildStatCard(
-                      'Mantenimiento',
-                      '7',
-                      Icons.home_repair_service,
-                      Colors.purple,
+                    const SizedBox(width: 16), // Espacio entre las cartas
+                    Expanded(
+                      child: _buildStatCard(
+                        'Mantenimiento',
+                        '7',
+                        Icons.home_repair_service,
+                        Colors.purple,
+                      ),
                     ),
                   ],
                 ),
@@ -175,18 +209,18 @@ class DashboardView extends StatelessWidget {
         maxY: 1000,
         lineBarsData: [
           LineChartBarData(
-            spots: [
-              const FlSpot(0, 200),
-              const FlSpot(1, 400),
-              const FlSpot(2, 300),
-              const FlSpot(3, 600),
-              const FlSpot(4, 800),
-              const FlSpot(5, 500),
-              const FlSpot(6, 900),
-              const FlSpot(7, 700),
-              const FlSpot(8, 600),
-              const FlSpot(9, 800),
-              const FlSpot(10, 1000),
+            spots: const [
+              FlSpot(0, 200),
+              FlSpot(1, 400),
+              FlSpot(2, 300),
+              FlSpot(3, 600),
+              FlSpot(4, 800),
+              FlSpot(5, 500),
+              FlSpot(6, 900),
+              FlSpot(7, 700),
+              FlSpot(8, 600),
+              FlSpot(9, 800),
+              FlSpot(10, 1000),
             ],
             isCurved: true,
             color: const Color.fromARGB(255, 139, 140, 141),
@@ -220,9 +254,7 @@ class DashboardView extends StatelessWidget {
           ]),
         ],
         titlesData: const FlTitlesData(
-          leftTitles: AxisTitles(
-            sideTitles: SideTitles(showTitles: true),
-          ),
+          leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true)),
           bottomTitles: AxisTitles(
               sideTitles: SideTitles(showTitles: true, reservedSize: 30)),
         ),
@@ -258,7 +290,7 @@ class DashboardView extends StatelessWidget {
             child: ListView(
               children: const [
                 ListTile(
-                    title: Text('Yate : Camila Perez ',
+                    title: Text('Yate: Camila Pérez',
                         style: TextStyle(color: Colors.white))),
                 ListTile(
                     title:
@@ -276,32 +308,18 @@ class DashboardView extends StatelessWidget {
 
   Widget _buildStatCard(
       String title, String value, IconData icon, Color color) {
-    return Expanded(
-      child: Container(
-        margin: const EdgeInsets.all(8.0),
+    return Card(
+      color: const Color(0xFF2E2E3E),
+      child: Padding(
         padding: const EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          color: const Color(0xFF2E2E3E),
-          borderRadius: BorderRadius.circular(10),
-        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(icon, color: color, size: 40),
-            const SizedBox(height: 10),
-            Text(
-              value,
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              title,
-              style: const TextStyle(color: Colors.grey, fontSize: 16),
-              textAlign: TextAlign.center,
-            ),
+            const SizedBox(height: 8),
+            Text(title, style: const TextStyle(color: Colors.white)),
+            const SizedBox(height: 4),
+            Text(value,
+                style: const TextStyle(color: Colors.white, fontSize: 24)),
           ],
         ),
       ),

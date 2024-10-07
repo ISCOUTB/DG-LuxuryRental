@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:login_user/pages/dashboard_view.dart';
-import 'package:login_user/pages/login_page.dart'; // Importas tu página de login
+import 'package:login_user/pages/YachtListPage.dart';
+// Importa la vista de la lista de yates
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(), // Aquí llamas a LoginPage como página inicial
+      home: YachtListPage(), // Aquí llamas a YachtListPage como página inicial
     );
   }
 }
