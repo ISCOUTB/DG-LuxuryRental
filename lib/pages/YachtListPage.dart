@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:login_user/pages/checkout.dart';
 import 'package:login_user/pages/login_page.dart';
 
 class YachtListPage extends StatefulWidget {
@@ -449,7 +450,12 @@ class _YachtListPageState extends State<YachtListPage> {
                     borderRadius: BorderRadius.circular(8),
                     child: ElevatedButton(
                       onPressed: () {
-                        // Acción al presionar el botón
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CheckoutPage(),
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue, // Color del botón
