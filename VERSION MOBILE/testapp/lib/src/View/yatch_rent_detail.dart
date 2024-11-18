@@ -192,10 +192,10 @@ class YachtRentDetail extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      yachtInfo("images/icon1.png", yacht.length),
-                      yachtInfo("images/icon4.png", yacht.capacity),
-                      yachtInfo(
-                          "images/icon3.png", "\$${yacht.pricePerDay}/Day"),
+                      yachtInfo("assets/images/icon1.png", yacht.length),
+                      yachtInfo("assets/images/icon4.png", yacht.capacity),
+                      yachtInfo("assets/images/icon3.png",
+                          "\$${yacht.pricePerDay}/Day"),
                     ],
                   ),
                   SizedBox(height: size.height * 0.02),

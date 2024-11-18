@@ -36,7 +36,7 @@ List<Yacht> yachtList = [
     capacity: "15",
     type: "Luxury",
     rating: "4.8",
-    image: "images/image1.jpg",
+    image: "assets/images/image1.jpg",
     color: const Color(0xff7aafff),
   ),
   Yacht(
@@ -48,7 +48,7 @@ List<Yacht> yachtList = [
     capacity: "12",
     type: "Standard",
     rating: "4.5",
-    image: "images/image2.jpg",
+    image: "assets/images/image2.jpg",
     color: const Color(0xff63bed8),
   ),
   Yacht(
@@ -60,7 +60,7 @@ List<Yacht> yachtList = [
     capacity: "10",
     type: "Budget",
     rating: "4.0",
-    image: "images/image3.jpg",
+    image: "assets/images/image3.jpg",
     color: const Color(0xffad85e6),
   ),
   Yacht(
@@ -72,7 +72,7 @@ List<Yacht> yachtList = [
     capacity: "20",
     type: "Luxury",
     rating: "5.0",
-    image: "image4.jpg",
+    image: "assets/images/image4.jpg",
     color: const Color(0xff44aeb2),
   ),
   Yacht(
@@ -84,7 +84,7 @@ List<Yacht> yachtList = [
     capacity: "14",
     type: "Premium",
     rating: "4.7",
-    image: "image7.jpg",
+    image: "assets/images/image7.jpg",
     color: const Color(0xffad85e6),
   ),
   Yacht(
@@ -96,7 +96,7 @@ List<Yacht> yachtList = [
     capacity: "12",
     type: "Standard",
     rating: "4.3",
-    image: "images/image6.jpg",
+    image: "assets/images/image6.jpg",
     color: const Color(0xff44aeb2),
   ),
   Yacht(
@@ -108,7 +108,7 @@ List<Yacht> yachtList = [
     capacity: "18",
     type: "Luxury",
     rating: "4.9",
-    image: "images/image7.jpg",
+    image: "assets/images/image7.jpg",
     color: const Color(0xff7aafff),
   ),
   Yacht(
@@ -120,7 +120,7 @@ List<Yacht> yachtList = [
     capacity: "13",
     type: "Premium",
     rating: "4.6",
-    image: "images/image8.jpg",
+    image: "assets/images/image8.jpg",
     color: const Color(0xff63bed8),
   ),
   Yacht(
@@ -132,7 +132,7 @@ List<Yacht> yachtList = [
     capacity: "10",
     type: "Budget",
     rating: "4.2",
-    image: "images/image9.jpg",
+    image: "assets/images/image9.jpg",
     color: const Color(0xffad85e6),
   ),
   Yacht(
@@ -144,7 +144,7 @@ List<Yacht> yachtList = [
     capacity: "16",
     type: "Luxury",
     rating: "4.8",
-    image: "images/image10.jpg",
+    image: "assets/images/image10.jpg",
     color: const Color(0xff7aafff),
   ),
 ];
